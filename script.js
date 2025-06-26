@@ -59,6 +59,14 @@ button10.onclick = function() {
 
 button.onclick = function() {
     randomnum.textContent = Math.floor(Math.random() * 10) + 1;
+    if(input == randomnum.textContent) {
+    document.getElementById("result").textContent = "You guessed the number!";
+    }
+    if(input != randomnum.textContent) {
+        document.getElementById("result").textContent = "You guessed wrong!";
+    }
+    const rolled = Math.floor(Math.random() * 10) + 1;
+    randomnum.textContent = rolled;
+
+    const resultElement = document.getElementById("result");
 }
-
-
